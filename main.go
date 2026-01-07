@@ -3,23 +3,22 @@ package main
 import(
 	"net/http"
 	"fmt"
-	"github.com/thepiyush-303"
+	"github.com/thepiyush-303/rett/db"
+
 )
 
 func main() {
 
-	db := 
+	dbconn := db.ConnectDB()
+	defer dbconn.Close()
 
 	mux := http.NewServeMux()
 
 	mux.HandleFunc("/", handleRoot)
-	mux.HandleFunc("/register", handleRegister)
+	mux.HandleFunc("/register", db.RegisterUser)
 
 }
 
-func handleRegister(w http.ResponseWriter, r *http.Request){
-
-}
 
 func handleRoot(w http.ResponseWriter, r *http.Request){
 	fmt.Fprint(w, "hello world")

@@ -2,12 +2,12 @@ package db
 
 import (
 	"database/sql"
-	"fmt"
+	// "fmt"
 	"log"
-	_ "github.com/jackc/pgx/v5/stdlib" //-> driver
+	// _ "github.com/jackc/pgx/v5/stdlib" //-> driver
 )
 
-func connectDB(db *sql.DB){
+func ConnectDB() *sql.DB{
 	db, err := sql.Open(
 		"pgx",
 		"postgres://postgres:heythisismypassword@localhost:5432/authdb",
