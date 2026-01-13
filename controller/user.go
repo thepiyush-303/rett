@@ -1,9 +1,11 @@
 package controller
 
 import (
+	"fmt"
 	"database/sql"
 	"net/http"
 	"github.com/thepiyush-303/rett/db"
+	"golang.org/x/crypto/bcrypt"
 )
 
 func RegisterUser(dbconn *sql.DB) http.HandlerFunc {
@@ -34,7 +36,7 @@ func RegisterUser(dbconn *sql.DB) http.HandlerFunc {
 		password = string(hashedPassword)
 		user := db.User{
 			Email: email,
-			Password: hashedPassword,
+			Password: string(hashedPassword),
 		}
 
 		db.insertUser(dbconn, user)
