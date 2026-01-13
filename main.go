@@ -3,8 +3,8 @@ package main
 import(
 	"net/http"
 	"fmt"
+	"github.com/thepiyush-303/rett/controller"
 	"github.com/thepiyush-303/rett/db"
-
 )
 
 func main() {
@@ -15,7 +15,7 @@ func main() {
 	mux := http.NewServeMux()
 
 	mux.HandleFunc("/", handleRoot)
-	mux.HandleFunc("/register", db.RegisterUser)
+	mux.HandleFunc("/register", controller.RegisterUser(dbconn))
 
 }
 

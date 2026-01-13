@@ -19,7 +19,7 @@ func RegisterUser(dbconn *sql.DB) http.HandlerFunc {
 			return
 		}
 
-		_, err := db.checkUserByEmailol(dbconn, email)
+		_, err := db.CheckUserByEmail(dbconn, email)
 
 		if err == nil{
 			http.Error(w, "user already exist", http.StatusBadRequest)
@@ -39,7 +39,7 @@ func RegisterUser(dbconn *sql.DB) http.HandlerFunc {
 			Password: string(hashedPassword),
 		}
 
-		db.insertUser(dbconn, user)
+		db.InsertUser(dbconn, user)
 		fmt.Fprintf(w, "user registered")
 	}
 }

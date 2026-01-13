@@ -4,7 +4,7 @@ import (
 	"database/sql"
 	// "fmt"
 	"log"
-	// _ "github.com/jackc/pgx/v5/stdlib" //-> driver
+	_ "github.com/jackc/pgx/v5/stdlib" //-> driver
 )
 
 func ConnectDB() *sql.DB{

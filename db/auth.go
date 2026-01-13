@@ -6,7 +6,7 @@ import (
 )
 
 
-func checkUserByEmail(db *sql.DB, email string) (User, error){
+func CheckUserByEmail(db *sql.DB, email string) (User, error){
 	query := `SELECT email, password FROM users WHERE email = $1`
 
 	var user User
@@ -19,7 +19,7 @@ func checkUserByEmail(db *sql.DB, email string) (User, error){
 	return user, nil
 }
 
-func insertUser(db *sql.DB, user User) int {
+func InsertUser(db *sql.DB, user User) int {
 	query := `INSERT INTO users ( 
 	name, email) VALUES ($1, $2) RETURNING id`
 
