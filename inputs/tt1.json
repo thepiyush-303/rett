@@ -1,0 +1,103 @@
+{
+    "number_of_classes": 40,
+    "total_batches": 3,
+    "total_time_slots_per_day": 8,
+    "days_per_week": 5,
+    "total_time_range": "09:00-17:00",
+    "lunch_time": "13:00-13:45",
+    "time_slots": [
+        "09:00-09:45",
+        "09:50-10:35",
+        "10:40-11:25",
+        "11:30-12:15",
+        "13:00-13:45",
+        "13:50-14:35",
+        "14:40-15:25",
+        "15:30-16:15"
+    ],
+    "rooms": [
+        { "code": "R101", "type": "lecture", "capacity": 80 },
+        { "code": "R102", "type": "lecture", "capacity": 60 },
+        { "code": "LAB1", "type": "lab", "capacity": 30 },
+        { "code": "LAB2", "type": "lab", "capacity": 28 },
+        { "code": "AUD", "type": "auditorium", "capacity": 200 }
+    ],
+    "batches": [
+        { "id": "B1", "name": "Batch A", "size": 70 },
+        { "id": "B2", "name": "Batch B", "size": 60 },
+        { "id": "B3", "name": "Batch C", "size": 55 }
+    ],
+    "teachers": [
+        { "id": "T01", "name": "Dr. Asha Mehta" },
+        { "id": "T02", "name": "Mr. Ramesh Iyer" },
+        { "id": "T03", "name": "Ms. Priya Kapoor" },
+        { "id": "T04", "name": "Dr. Sandeep Rao" },
+        { "id": "T05", "name": "Prof. Neha Sharma" }
+    ],
+    "subjects": [
+        {
+            "subject_code": "CS101",
+            "subject_name": "Introduction to Programming",
+            "teacher_id": "T01",
+            "batches": ["B1","B2","B3"],
+            "weekly_sessions": 5,
+            "preferred_room_type": "lecture"
+        },
+        {
+            "subject_code": "CS102",
+            "subject_name": "Data Structures",
+            "teacher_id": "T02",
+            "batches": ["B1","B2"],
+            "weekly_sessions": 4,
+            "preferred_room_type": "lecture"
+        },
+        {
+            "subject_code": "CS201",
+            "subject_name": "Algorithms",
+            "teacher_id": "T03",
+            "batches": ["B1","B2"],
+            "weekly_sessions": 3,
+            "preferred_room_type": "lecture"
+        },
+        {
+            "subject_code": "CSL01",
+            "subject_name": "Programming Lab",
+            "teacher_id": "T01",
+            "batches": ["B1","B2","B3"],
+            "weekly_sessions": 3,
+            "preferred_room_type": "lab"
+        },
+        {
+            "subject_code": "MA101",
+            "subject_name": "Discrete Mathematics",
+            "teacher_id": "T04",
+            "batches": ["B1","B2","B3"],
+            "weekly_sessions": 3,
+            "preferred_room_type": "lecture"
+        },
+        {
+            "subject_code": "PH101",
+            "subject_name": "Physics",
+            "teacher_id": "T05",
+            "batches": ["B3"],
+            "weekly_sessions": 2,
+            "preferred_room_type": "lecture"
+        },
+        {
+            "subject_code": "EE101",
+            "subject_name": "Basic Electronics",
+            "teacher_id": "T02",
+            "batches": ["B2","B3"],
+            "weekly_sessions": 2,
+            "preferred_room_type": "lecture"
+        },
+        {
+            "subject_code": "HS101",
+            "subject_name": "Communication Skills",
+            "teacher_id": "T05",
+            "batches": ["B1","B2","B3"],
+            "weekly_sessions": 2,
+            "preferred_room_type": "auditorium"
+        }
+    ]
+}
